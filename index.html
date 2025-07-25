@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dishrupt 🍽️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="index.html"><h1 class="logo">Dishrupt</h1></a>
+
+        <form class="search">
+          <input
+            type="text"
+            class="search__field"
+            placeholder="Search for recipes..."
+          />
+          <button class="btn search__btn" type="submit">
+            <svg class="icon">
+              <use href="./assets/icons.svg#icon-search"></use>
+            </svg>
+          </button>
+        </form>
+      </header>
+
+      <div class="main">
+        <section class="results" id="results">
+          <ul class="results__list"></ul>
+          <!-- Search results will be injected here -->
+          <!--  <li class="preview">
+              <a
+                class="preview__link preview__link--active"
+                href="#5ed6604591c37cdc054bc886"
+              >
+                <figure class="preview__fig">
+                  <img src="./assets/img/rice.jpg" alt="Pasta" />
+                </figure>
+                <div class="preview__data">
+                  <h4 class="preview__title">Spaghetti Bolognese</h4>
+                  <p class="preview__publisher">John Doe</p>
+                </div>
+              </a>
+            </li>-->
+        </section>
+
+        <!-- <div class="eror">
+          <div>
+            <svg class="recipe__info-icon">
+              <use href="./assets/icons.svg#icon-alert-triangle"></use>
+            </svg>
+          </div>
+          <p>No recipes found for your query. Please, try again!</p>
+        </div> -->
+
+        <section class="recipe" id="recipe">
+          <!-- Recipe details will be injected here -->
+          <!-- <figure class="recipe__fig">
+            <img
+              src="./assets/img/rice.jpg"
+              alt="Pasta"
+              class="recipe__img"
+            />
+            <h1 class="recipe__title">
+              <span>Spaghetti Bolognese</span>
+            </h1>
+          </figure>
+
+          <div class="recipe__details">
+            <div class="recipe__info">
+              <svg class="recipe__info-icon">
+                <use href="./assets/icons.svg#icon-clock"></use>
+              </svg>
+              <span class="recipe__info-data recipe__info-data--minutes"
+                >45</span
+              >
+              <span class="recipe__info-text">minutes</span>
+            </div>
+            <div class="recipe__info">
+              <svg class="recipe__info-icon">
+                <use href="./assets/icons.svg#icon-users"></use>
+              </svg>
+              <span class="recipe__info-data recipe__info-data--people">4</span>
+              <span class="recipe__info-text">servings</span>
+            </div>
+            <button class="btn--round btn--bookmark">
+              <svg class="">
+                <use href="./assets/icons.svg#icon-bookmark"></use>
+              </svg>
+            </button>
+            
+          </div>
+
+          <div class="recipe__ingredients">
+            <h2 class="heading--2">Recipe ingredients</h2>
+            <ul class="recipe__ingredient-list">
+              <li class="recipe__ingredient">✔ 400g spaghetti</li>
+              <li class="recipe__ingredient">✔ 200g minced beef</li>
+              <li class="recipe__ingredient">✔ Tomato sauce</li>
+            </ul>
+          </div> -->
+        </section>
+
+        <aside class="bookmarks" id="bookmarks">
+          <h2>Bookmarks</h2>
+          <ul class="bookmarks__list">
+            <!-- Bookmarked recipes -->
+            <!-- <li class="preview">
+              <a class="preview__link" href="#5ed6604591c37cdc054bc886">
+                <figure class="preview__fig">
+                  <img
+                    src="./assets/img/rice.jpg"
+                    alt="Pasta"
+                    style="height: 100px; width: 100px"
+                  />
+                </figure>
+                <div class="preview__data">
+                  <h4 class="preview__title">Spaghetti Bolognese</h4>
+                  <p class="preview__publisher">John Doe</p>
+                </div>
+              </a>
+            </li> -->
+          </ul>
+        </aside>
+      </div>
+
+      <div class="upload">
+        <!-- Upload new recipe form -->
+        <h2 class="upload__heading">Upload Your Recipe</h2>
+
+        <form class="upload__form">
+          <div class="upload__column">
+            <label>Recipe Title</label>
+            <input
+              value="TEST"
+              required
+              name="title"
+              type="text"
+              placeholder="E.g. Pasta Carbonara"
+              class="UploadTitle"
+            />
+
+            <label>URL</label>
+            <input
+              value="https://example.com"
+              required
+              name="sourceUrl"
+              type="text"
+              placeholder="Recipe source link"
+              class="sourceUrl"
+            />
+
+            <label>Image URL</label>
+            <input
+              value="http://forkify-api.herokuapp.com/images/5566512470_9e98939ab3_z2766.jpg"
+              required
+              name="image"
+              type="text"
+              placeholder="Image link"
+              class="imageurl"
+            />
+
+            <label>Publisher</label>
+            <input
+              value="Samuel Sofolahan"
+              required
+              name="publisher"
+              type="text"
+              placeholder="Your name or blog"
+              class="publisher"
+            />
+
+            <label>Prep Time (mins)</label>
+            <input
+              value="56"
+              required
+              name="cookingTime"
+              type="number"
+              placeholder="E.g. 30"
+              class="cookingTime"
+            />
+
+            <label>Servings</label>
+            <input
+              value="3"
+              required
+              name="servings"
+              type="number"
+              placeholder="E.g. 4"
+              class="servings"
+            />
+          </div>
+
+          <div class="upload__column">
+            <label>Ingredient 1</label>
+            <input
+              value="0.5,kg,Rice"
+              required
+              type="text"
+              name="ingredient-1"
+              placeholder="Format: 'Quantity,Unit,Description'"
+              class="ingredient1"
+            />
+
+            <label>Ingredient 2</label>
+            <input
+              value="1,,Avocado"
+              required
+              type="text"
+              name="ingredient-2"
+              placeholder="E.g. 100,g,flour"
+              class="ingredient2"
+            />
+
+            <label>Ingredient 3</label>
+            <input
+              value=",,salt"
+              type="text"
+              name="ingredient-3"
+              class="ingredient3"
+              placeholder="Quantity, Unit, Description"
+            />
+
+            <label>Ingredient 4</label>
+            <input
+              value=""
+              type="text"
+              name="ingredient-4"
+              class="ingredient4"
+              placeholder="Quantity, Unit, Description"
+            />
+
+            <label>Ingredient 5</label>
+            <input
+              value=""
+              type="text"
+              name="ingredient-5"
+              class="ingredient5"
+              placeholder="Quantity, Unit, Description"
+            />
+
+            <label>Ingredient 6</label>
+            <input
+              value=""
+              type="text"
+              name="ingredient-6"
+              class="ingredient6"
+              placeholder="Quantity, Unit, Description"
+            />
+          </div>
+
+          <button class="btn upload__btn">
+            <svg>
+              <use href="./assets/icons.svg#icon-upload-cloud"></use>
+            </svg>
+            <span>Upload</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="js/controller.js"></script>
+  </body>
+</html>

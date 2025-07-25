@@ -1,0 +1,52 @@
+/* General grid & layout */
+
+.container {
+  max-width: 1200px;
+  margin: 1.5rem auto 3rem;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 1.5rem;
+}
+
+.header {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 3fr 4fr 1.5fr;
+  gap: 2rem;
+  min-height: 600px;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  .bookmarks {
+    order: 2;
+    margin-top: 2rem;
+  }
+
+  .search {
+    flex-direction: column;
+  }
+
+  .search__field, .search__btn {
+    width: 100%;
+  }
+}

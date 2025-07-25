@@ -1,0 +1,9 @@
+@import "./base.css";
+@import "./layout.css";
+@import "./header.css";
+@import "./animations.css";
+@import "./bookmarks.css";
+@import "./loading.css";
+@import "./recipe.css";
+@import "./results.css";
+@import "./upload.css";

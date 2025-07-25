@@ -1,0 +1,100 @@
+.upload {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  max-width: 1000px;
+  margin: 2rem auto;
+  color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.upload__heading {
+  font-size: 2rem;
+  color: #ff6a3d;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.upload__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.upload__column {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.upload__column label {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 0.25rem;
+}
+
+.upload__column input {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #2b2b2b;
+  color: #f1f1f1;
+  font-size: 1rem;
+  transition: background-color 0.2s, border 0.2s;
+}
+
+.upload__column input:focus {
+  background-color: #333;
+  outline: 2px solid #ff6a3d;
+}
+
+.upload__btn {
+  margin-top: 2rem;
+  align-self: center;
+  padding: 1rem 2rem;
+  background-color: #ff6a3d;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload__btn:hover {
+  background-color: #ff5126;
+}
+
+.upload__btn svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+}
+
+@media (max-width: 768px) {
+  .upload__form {
+    flex-direction: column;
+  }
+
+  .upload__btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .upload {
+    padding: 1rem;
+  }
+
+  .upload__heading {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,86 @@
+/* Variables, resets, and typography */
+
+:root {
+  --color-bg: #121212;
+  --color-primary: #ff6b35;
+  --color-text-light: #f1f1f1;
+  --color-text-muted: #b0b0b0;
+  --color-panel-bg: rgba(255, 255, 255, 0.05);
+  --font-family: 'Outfit', sans-serif;
+  --shadow-soft: 0 4px 8px rgba(0, 0, 0, 0.7);
+  --radius: 12px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-light);
+  font-family: var(--font-family);
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.04em;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+.btn {
+  cursor: pointer;
+  background: var(--color-primary);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #ff8354;
+  outline: none;
+}
+
+.hidden {
+  display: none !important;
+}

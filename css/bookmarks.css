@@ -1,0 +1,39 @@
+/* Bookmarks Sidebar */
+
+.bookmarks {
+  background-color: var(--color-panel-bg);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  color: var(--color-text-light);
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.bookmarks h2 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.bookmarks__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bookmarks__list li {
+  cursor: pointer;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.bookmarks__list li:hover {
+  color: var(--color-primary);
+}
+
+.bookmarks__list .noBookmarkMsg {
+  cursor: default;
+  font-style: italic;
+}
